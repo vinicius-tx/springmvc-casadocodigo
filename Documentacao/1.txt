@@ -2,10 +2,35 @@ Resumo 01
 
 2.2 ACESSANDO O PRIMEIRO ENDEREÇO
 
+Classe HomeController
+
 @Controller -> Ensinamos ao spring MVC que essa classe é responsável por atender requisições vindas de um cliete.
 
 @RequestMapping -> Fizemos ligação entre uma rota e o método principal por tratá-la. Chama-se isso de binding.
 
 2.3 HABILITTANDO O SPRING MVC
+
+  A Servlet responsável por tratar todas as requisições que chegam para o Spring MVC é a DispatcherServlet. Precisamos justamente dela para que tudo comece a funcionar.
+
+Classe ServletSpringMVC
+
+  desc: Serve para aplicar o padrão de DispatcherServlet
+
+  Para fazermos essa configuração atravé de classes java temos que extender de AbstractAnnotationConfigDispatcherServletInitializer.
+
+'getServletMapping()' -> Padrão de endereço que vai ser delegado para o servlet do spring MVC.
+
+'getServletConfigClasses()' -> Diz quais controllers devem ser mapedos e classes que devem ser carregadas pelo Spring. Retorna uma ou mais classes reponsáveis por indicar quais classes devem ser lidas.
+
+Classe AppWebConfiguration 
+  desc: Expor para a servlet do Spring MVC quais são as classes que devem ser lidas e carregadas.
+
+@ComponentScan -> Informa os pacotes que devem ser lidos
+
+@EnableWebMVC -> habilita várias funcionalidades que serão usadas na apliação web. Conversão XML, JSON, validação e geração RSS.
+
+
+
+
 
 
