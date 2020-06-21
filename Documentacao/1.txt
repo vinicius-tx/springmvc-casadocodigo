@@ -1,0 +1,11 @@
+Resumo 01
+
+2.2 ACESSANDO O PRIMEIRO ENDEREÇO
+
+@Controller -> Ensinamos ao spring MVC que essa classe é responsável por atender requisições vindas de um cliete.
+
+@RequestMapping -> Fizemos ligação entre uma rota e o método principal por tratá-la. Chama-se isso de binding.
+
+2.3 HABILITTANDO O SPRING MVC
+
+
